@@ -27,7 +27,6 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(body.velocity);
         /*ContactPoint2D[] contacts = new ContactPoint2D[100];
         collider.GetContacts(contacts);
         ++groundContacts;
