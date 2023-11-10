@@ -1676,6 +1676,7 @@ GameObject:
   - component: {fileID: 1938596594}
   - component: {fileID: 1938596596}
   - component: {fileID: 1938596597}
+  - component: {fileID: 1938596598}
   m_Layer: 0
   m_Name: CarrotDude
   m_TagString: Untagged
@@ -1873,6 +1874,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+<<<<<<< Updated upstream
 --- !u!1 &2064103027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,17 +1896,25 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &2064103028
+=======
+--- !u!114 &1938596598
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 2064103027}
+=======
+  m_GameObject: {fileID: 1938596591}
+>>>>>>> Stashed changes
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56ebee7b939a3454b9cd333782657635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   pauseMenuUI: {fileID: 655507332}
 --- !u!114 &2064103029
 MonoBehaviour:
@@ -1990,3 +2000,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+=======
+  pauseMenuUI: {fileID: 0}
+>>>>>>> Stashed changes
