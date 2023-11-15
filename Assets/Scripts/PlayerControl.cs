@@ -36,8 +36,16 @@ public class PlayerControl : MonoBehaviour
         body.velocity = new Vector2(speed, body.velocity.y + jumpAdder);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        Die();
+
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        Debug.Log("bounce");
+        ContactPoint2D contact = collision.GetContact(0);
+        Vector2 point = contact.normal;
+        Debug.DrawLine(contact.point, contact.point + 5 * contact.normal);
+        if(Mathf.Abs(point.x) > Mathf.Abs(point.y)) {
+            Die();
+        }
     }
 
     // https://kylewbanks.com/blog/unity-2d-checking-if-a-character-or-object-is-on-the-ground-using-raycasts

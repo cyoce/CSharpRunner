@@ -7,12 +7,17 @@ using UnityEngine.Tilemaps;
 
 public class TilemapController : MonoBehaviour {
     // Start is called before the first frame update
-    Tilemap terrainMap;
+    public Tilemap terrainMap;
+    public Tilemap obstacleMap;
     public TileBase groundBlock;
+    public TileBase obstacle;
+
     int groundHeight = -1;
 
+
+    System.Random rand = new System.Random();
+
     void Start() {
-        terrainMap = GetComponent<Tilemap>();
 
         (Vector3Int leftCoord, Vector3Int rightCoord) = CamBounds();
         while(leftCoord.x <= rightCoord.x) {
@@ -38,6 +43,9 @@ public class TilemapController : MonoBehaviour {
         Vector3Int rightBound = CamBounds().Item2;
         if(terrainMap.GetTile(rightBound) == null) {
             terrainMap.SetTile(rightBound, groundBlock);
+            if(rand.Next(100) <= 15) {
+                obstacleMap.SetTile(rightBound + new Vector3Int(0, 1, 0), obstacle);
+            }
         }
     }
 }
