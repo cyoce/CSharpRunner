@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1839735485 &16753847 stripped
-Tilemap:
-  m_CorrespondingSourceObject: {fileID: 5329981193548893131, guid: d87e6223228048e4fa6e7b3c310757ce, type: 3}
-  m_PrefabInstance: {fileID: 6547136225076710889}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &257110436
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,27 +564,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3262786839535842937, guid: 5bdcc9cb197b0d54bab33b060b7c0546, type: 3}
   m_PrefabInstance: {fileID: 4176349528730055206}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &952076797 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7478109219996368326, guid: d87e6223228048e4fa6e7b3c310757ce, type: 3}
-  m_PrefabInstance: {fileID: 6547136225076710889}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &952076800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952076797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6193f1187233b3c438cc075934e73cc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainMap: {fileID: 16753847}
-  obstacleMap: {fileID: 6547136225076710890}
-  groundBlock: {fileID: 11400000, guid: 895290c18cceb6c4199b1b9eb62fff7a, type: 2}
-  obstacle: {fileID: 11400000, guid: 7ac42f0c832a0da4a8927fc60e0eb143, type: 2}
 --- !u!4 &1938596593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6047139342874345626, guid: c6b627c7826484849aa63d6574690502, type: 3}
@@ -1046,13 +1020,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7478109219996368326, guid: d87e6223228048e4fa6e7b3c310757ce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 952076800}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d87e6223228048e4fa6e7b3c310757ce, type: 3}
---- !u!1839735485 &6547136225076710890 stripped
-Tilemap:
-  m_CorrespondingSourceObject: {fileID: 6243450789120996273, guid: d87e6223228048e4fa6e7b3c310757ce, type: 3}
-  m_PrefabInstance: {fileID: 6547136225076710889}
-  m_PrefabAsset: {fileID: 0}
