@@ -6,8 +6,7 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PlayerControl : MonoBehaviour
-{
+public class PlayerControl : MonoBehaviour {
     public static event Action onDeath;
 
     public LayerMask terrainLayer;
@@ -17,26 +16,29 @@ public class PlayerControl : MonoBehaviour
     SpriteRenderer rendy;
     Color orange;
     bool isDead = false;
+
+    private bool canJump=false, couldJump=false;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         body = GetComponent<Rigidbody2D>();
         rendy = GetComponent<SpriteRenderer>();
         orange = rendy.color;
-        
+
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if(isDead) return;
         rendy.color = IsGrounded() ? orange : Color.white;
-        float jumpAdder = 0;
-        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded()) {
+        float jumpAdder = body.velocity.y;
+        couldJump = canJump;
+        canJump = Input.GetKey(KeyCode.Space) && IsGrounded();
+        if(canJump && !couldJump) {
             jumpAdder = 5;
+            Debug.Log("jump");
         }
-        
-        body.velocity = new Vector2(speed, body.velocity.y + jumpAdder);
+
+        body.velocity = new Vector2(speed, jumpAdder);
     }
 
 
@@ -52,10 +54,10 @@ public class PlayerControl : MonoBehaviour
     }
 
     // https://kylewbanks.com/blog/unity-2d-checking-if-a-character-or-object-is-on-the-ground-using-raycasts
-    bool IsGrounded() { 
+    bool IsGrounded() {
         Vector2 position = transform.position;
         Vector2 direction = Vector2.down;
-        float distance = 0.7f;
+        float distance = 0.6f;
 
         RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, terrainLayer);
         if(hit.collider != null) {
