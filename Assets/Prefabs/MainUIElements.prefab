@@ -37,7 +37,7 @@ RectTransform:
   - {fileID: 8135355093091804583}
   - {fileID: 51102851620638717}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceRanText: {fileID: 5933039503305327903}
   distanceRan: 0
+  elapsedSeconds: 0
   gameOver: 0
 --- !u!1 &1143203874316252124
 GameObject:
@@ -148,7 +149,7 @@ GameObject:
   - component: {fileID: 2756493822661657194}
   - component: {fileID: 5939211819363913371}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: HighScore_TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,7 +284,7 @@ GameObject:
   - component: {fileID: 8316191681450876267}
   - component: {fileID: 5083460501818392210}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Score_TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -418,7 +419,7 @@ GameObject:
   - component: {fileID: 7275886948973853853}
   - component: {fileID: 5933039503305327903}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Distance_TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
