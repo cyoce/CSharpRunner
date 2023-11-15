@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -5,20 +6,18 @@ using UnityEditor.Rendering;
 using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
+    public static event Action onDeath;
+
     public LayerMask terrainLayer;
     public float speed;
     Rigidbody2D body;
-    Collider2D collider;
-    Collider2D feet;
     SpriteRenderer rendy;
     Color orange;
-    int groundContacts = 0;
+    bool isDead = false;
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
-        feet = GetComponentInChildren<Collider2D>();
         rendy = GetComponent<SpriteRenderer>();
         orange = rendy.color;
         
@@ -27,15 +26,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*ContactPoint2D[] contacts = new ContactPoint2D[100];
-        collider.GetContacts(contacts);
-        ++groundContacts;
-        foreach(ContactPoint2D contact in contacts) {
-            if(Mathf.Abs(contact.point.x - collider.bounds.center.x) < collider.bounds.extents.x) {
-                ++groundContacts;
-                break;
-            }
-        }*/
+        if(isDead) return;
         rendy.color = IsGrounded() ? orange : Color.white;
         float jumpAdder = 0;
         if(Input.GetKeyDown(KeyCode.Space) && IsGrounded()) {
@@ -45,21 +36,10 @@ public class PlayerControl : MonoBehaviour
         body.velocity = new Vector2(speed, body.velocity.y + jumpAdder);
     }
 
-    /*
-    private void OnCollisionEnter2D(Collision2D collision) {
-        foreach(ContactPoint2D contact in collision.contacts){
-            if(Mathf.Abs(contact.point.x - collider.bounds.center.x) < collider.bounds.extents.x) {
-                ++groundContacts;
-                break;
-            }
-        }
+    private void OnTriggerEnter2D(Collider2D collision) {
+        Die();
     }
 
-    private void OnCollisionExit2D(Collision2D collision) {
-        --groundContacts;
-    }
-    //*/
-    
     // https://kylewbanks.com/blog/unity-2d-checking-if-a-character-or-object-is-on-the-ground-using-raycasts
     bool IsGrounded() { 
         Vector2 position = transform.position;
@@ -74,4 +54,11 @@ public class PlayerControl : MonoBehaviour
         return false;
     }
 
+    void Die() {
+        onDeath?.Invoke();
+        Debug.Log("dead");
+        body.simulated = false;
+        rendy.color = Color.black;
+        isDead = true;
+    }
 }
