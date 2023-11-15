@@ -4,27 +4,24 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class DistanceManager : MonoBehaviour
-{
+public class DistanceManager : MonoBehaviour {
     public TMP_Text distanceRanText;
     public int distanceRan = 0;
-    public float elapsedSeconds = 0f;
     public bool gameOver = false;
-    void Start()
-    {
-            
+
+    void Start() {
+        TilemapController.nextBlock += NextBlock;
     }
 
-    void Update()
-    {
-       if (gameOver != true)
-        {
-            float presentTime = Time.deltaTime;
-            elapsedSeconds += presentTime;
-            distanceRan = (int)elapsedSeconds;
+    void NextBlock() {
+        ++distanceRan;
+    }
+
+    void Update() {
+        if(gameOver != true) {
 
             distanceRanText.text = "Distance Ran: " + distanceRan.ToString() + " Miles";
-            
+
         }
     }
 }
