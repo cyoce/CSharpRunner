@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class BunnieUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private TextMeshProUGUI bunnieText;
+
     void Start()
     {
-        
+        bunnieText = GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public void UpdateBunnieText(BunnyCounter bunnyCounter)
     {
-        
+        bunnieText.text = bunnyCounter.numberOfBunnies.ToString();
     }
 }
