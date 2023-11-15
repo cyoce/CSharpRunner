@@ -12,6 +12,8 @@ public class TilemapController : MonoBehaviour {
     public TileBase groundBlock;
     public TileBase obstacle;
 
+    public static event Action nextBlock;
+
     int groundHeight = -1;
 
 
@@ -43,6 +45,7 @@ public class TilemapController : MonoBehaviour {
         Vector3Int rightBound = CamBounds().Item2;
         if(terrainMap.GetTile(rightBound) == null) {
             terrainMap.SetTile(rightBound, groundBlock);
+            nextBlock?.Invoke();
             if(rand.Next(100) <= 15) {
                 obstacleMap.SetTile(rightBound + new Vector3Int(0, 1, 0), obstacle);
             }
