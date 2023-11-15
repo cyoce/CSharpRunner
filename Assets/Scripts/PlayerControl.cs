@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+
 public class PlayerControl : MonoBehaviour
 {
     public static event Action onDeath;
 
     public LayerMask terrainLayer;
     public float speed;
+
     Rigidbody2D body;
     SpriteRenderer rendy;
     Color orange;
