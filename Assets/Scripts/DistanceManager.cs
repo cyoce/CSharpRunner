@@ -8,6 +8,7 @@ public class DistanceManager : MonoBehaviour
 {
     public TMP_Text distanceRanText;
     public int distanceRan = 0;
+    public float elapsedSeconds = 0f;
     public bool gameOver = false;
     void Start()
     {
@@ -18,11 +19,12 @@ public class DistanceManager : MonoBehaviour
     {
        if (gameOver != true)
         {
-            DateTime presentTime = DateTime.Today;
-            int secondsElapsed = presentTime.Second;
-            distanceRan = secondsElapsed;
+            float presentTime = Time.deltaTime;
+            elapsedSeconds += presentTime;
+            distanceRan = (int)elapsedSeconds;
 
             distanceRanText.text = "Distance Ran: " + distanceRan.ToString() + " Miles";
+            
         }
     }
 }
