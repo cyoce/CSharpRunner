@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -17,13 +18,35 @@ public class PlayerControl : MonoBehaviour {
     Color orange;
     bool isDead = false;
 
+    public float jumpHeight;
+    public float airTime;
+
+    private float jumpVel;
+    private float gravScale;
+    void CalcGrav() {
+        // 2T = AirTime
+        // T = jumpVel / gravScale => jumpVel = gravScale * T
+        // => gravScale = jumpVel / T
+        // JumpHeight = jumpVel^2 / 2*gravScale
+        // gravScale = jumpVel^2 / 2*JumpHeight
+        // jumpVel^2 / gravScale = 2*JumpHeight
+        // jumpVel^2 / (jumpVel/T) = 2*JumpHeight
+        // jumpVel * T = 2*JumpHeight
+        // jumpVel = 2*JumpHeight / T = 4*JumpHeight / AirTime
+
+        jumpVel = 4 * jumpHeight / airTime;
+        gravScale = jumpVel / (airTime / 2);
+        body.gravityScale = gravScale / 9.81f;
+
+    }
+
     private bool canJump=false, couldJump=false;
     // Start is called before the first frame update
     void Start() {
         body = GetComponent<Rigidbody2D>();
         rendy = GetComponent<SpriteRenderer>();
         orange = rendy.color;
-
+        CalcGrav();
     }
 
     // Update is called once per frame
@@ -34,13 +57,11 @@ public class PlayerControl : MonoBehaviour {
         couldJump = canJump;
         canJump = Input.GetKey(KeyCode.Space) && IsGrounded();
         if(canJump && !couldJump) {
-            jumpAdder = 5;
-            Debug.Log("jump");
+            jumpAdder = jumpVel;
         }
 
         body.velocity = new Vector2(speed, jumpAdder);
     }
-
 
 
     private void OnCollisionEnter2D(Collision2D collision) {
