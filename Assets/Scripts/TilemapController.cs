@@ -48,7 +48,7 @@ public class TilemapController : MonoBehaviour {
             nextBlock?.Invoke();
             if(rand.Next(100) <= 15) {
                 obstacleMap.SetTile(rightBound + new Vector3Int(0, 1, 0), obstacle);
-            }
+            } 
         }
     }
 }
