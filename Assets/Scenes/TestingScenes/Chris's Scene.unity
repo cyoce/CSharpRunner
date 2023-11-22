@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 1605803172}
   - component: {fileID: 1605803171}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Game Over Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1595,6 +1595,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1215934561}
@@ -1602,6 +1606,22 @@ PrefabInstance:
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1240077945}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnScoreIncrease
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ScoreManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6047139342874345626, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: m_RootOrder
       value: 6
