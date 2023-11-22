@@ -8,13 +8,25 @@ public class ScoreManager : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text highScoreText;
 
+    int score = 0;
+    //int highScore = 0;
+
+    public void OnScoreIncrease(BunnyCounter bunnyCount)
+    {
+        score += 100;
+        PrintScore();
+        Debug.Log(score);
+    }
+
+    public void PrintScore()
+    {
+        scoreText.text = "Score: " + score.ToString();
+        //highScoreText.text = "High Score: " + highScore.ToString();
+    }
+
     void Start()
     {
-        int score = 0;
-        int highScore = 0;
-
-        scoreText.text = "Bunnies Collected: " + score.ToString();
-        highScoreText.text = "High Score: " + highScore.ToString();
+        PrintScore();
     }
 
     
