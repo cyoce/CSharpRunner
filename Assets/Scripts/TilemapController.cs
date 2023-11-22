@@ -11,7 +11,8 @@ public class TilemapController : MonoBehaviour {
     public Tilemap obstacleMap;
     public TileBase groundBlock;
     public TileBase obstacle;
-
+    public GameObject bunnyPrefab;
+  
     public static event Action nextBlock;
 
     int groundHeight = -1;
@@ -46,9 +47,26 @@ public class TilemapController : MonoBehaviour {
         if(terrainMap.GetTile(rightBound) == null) {
             terrainMap.SetTile(rightBound, groundBlock);
             nextBlock?.Invoke();
-            if(rand.Next(100) <= 15) {
+            int roll = rand.Next(100);
+            if (roll <= 15)
+            {
                 obstacleMap.SetTile(rightBound + new Vector3Int(0, 1, 0), obstacle);
-            } 
+            }
+            else if(roll <= 20)
+            {
+                SpawnBunny();
+            }
         }
     }
+
+    void SpawnBunny()
+    { 
+        Vector3Int rightBound = CamBounds().Item2;
+        Vector3 bunnyPlace = obstacleMap.GetCellCenterWorld(rightBound + new Vector3Int(0, 1, 0));
+        Instantiate(bunnyPrefab, bunnyPlace, Quaternion.identity);
+
+
+
+    }
+
 }

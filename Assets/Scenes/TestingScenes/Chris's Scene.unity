@@ -1110,25 +1110,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 51102851620638717, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 51102851620638717, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 238
-      objectReference: {fileID: 0}
     - target: {fileID: 1053990725506861476, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
       propertyPath: m_Name
       value: MainUIElements
-      objectReference: {fileID: 0}
-    - target: {fileID: 2590769597043000430, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
-      propertyPath: highScoreText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5933039503305327903, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
-      propertyPath: m_margin.z
-      value: -344.20438
       objectReference: {fileID: 0}
     - target: {fileID: 6838555132560249803, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
       propertyPath: m_Pivot.x
@@ -1215,8 +1199,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1143203874316252124, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
@@ -1595,10 +1578,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1215934561}
@@ -1606,22 +1585,6 @@ PrefabInstance:
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1240077945}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OnScoreIncrease
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ScoreManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 6047139342874345626, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: m_RootOrder
       value: 6
