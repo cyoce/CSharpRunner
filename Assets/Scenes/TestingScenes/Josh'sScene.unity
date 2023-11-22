@@ -1049,6 +1049,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2156481683455881021, guid: d87e6223228048e4fa6e7b3c310757ce, type: 3}
+      propertyPath: bunnyPrefab
+      value: 
+      objectReference: {fileID: 797492627196977085, guid: 6a0c154e2db5441ba9d554d80ed51f14, type: 3}
     - target: {fileID: 6981224169758432974, guid: d87e6223228048e4fa6e7b3c310757ce, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1203,17 +1207,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
---- !u!114 &1215934561 stripped
+--- !u!114 &1147969425 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3359529175735977115, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2590769597043000430, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
   m_PrefabInstance: {fileID: 1147969424}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1147969426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c075cfdcaa214299a4999849308badb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ec8cd601b33de44fbeadc67643e45d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1147969426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1053990725506861476, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
+  m_PrefabInstance: {fileID: 1147969424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1218914165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,9 +1500,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1215934561}
+      objectReference: {fileID: 1147969425}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1147969426}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnScoreIncrease
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateBunnieText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScoreManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BunnieUI, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6047139342874345626, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1682,11 +1715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6741241861291824607, guid: 6a0c154e2db5441ba9d554d80ed51f14, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3
+      value: 2.300003
       objectReference: {fileID: 0}
     - target: {fileID: 6741241861291824607, guid: 6a0c154e2db5441ba9d554d80ed51f14, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5500001
+      value: 0.55000305
       objectReference: {fileID: 0}
     - target: {fileID: 6741241861291824607, guid: 6a0c154e2db5441ba9d554d80ed51f14, type: 3}
       propertyPath: m_LocalPosition.z

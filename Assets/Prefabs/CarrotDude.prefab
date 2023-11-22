@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!212 &3356911931830302525
 SpriteRenderer:
@@ -210,8 +210,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BunnieUI, Assembly-CSharp
-        m_MethodName: UpdateBunnieText
+        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
+        m_MethodName: OnScoreIncrease
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
