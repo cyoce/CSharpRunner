@@ -51,6 +51,7 @@ public class PlayerControl : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
         if(isDead) return;
         rendy.color = IsGrounded() ? orange : Color.white;
         float jumpAdder = body.velocity.y;
