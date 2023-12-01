@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class BunnyCounter : MonoBehaviour
 {
@@ -11,12 +12,16 @@ public class BunnyCounter : MonoBehaviour
 
     private void Start() {
         trail = GetComponent<TrailRenderer>();
-        trail.forceRenderingOff = true;
+        //trail.forceRenderingOff = true;
     }
     public void BunniesCollected()
     {
         numberOfBunnies++;
         OnBunniesCollected.Invoke(this);
+    }
+
+    private void FixedUpdate() {
+
     }
 
 }
