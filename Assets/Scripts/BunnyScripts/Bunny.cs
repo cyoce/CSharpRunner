@@ -27,6 +27,7 @@ public class Bunny : MonoBehaviour {
         }
     }
 
+    /*
     private void OnTriggerExit2D(Collider2D collision) {
         if(collision.tag == "Player") {
             foreach(var item in GetComponents<BoxCollider2D>()) {
@@ -38,12 +39,13 @@ public class Bunny : MonoBehaviour {
             Debug.Log(GetComponent<Rigidbody2D>().gravityScale);
         }
     }
+    */
 
     private void FixedUpdate() {
         if(following && Time.time - activationTime >= delay) {
             TrailPoint dest = trail.GetPosition(Time.time - delay);
-            //transform.position = dest.position;
-            GetComponent<Rigidbody2D>().velocity = dest.velocity;
+            transform.position = dest.position;
+            //GetComponent<Rigidbody2D>().velocity = dest.velocity;
         }
     }
 }
