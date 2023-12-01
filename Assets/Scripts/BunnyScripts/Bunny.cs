@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class Bunny : MonoBehaviour {
     float delay = 0f;
-    static float baseDelay = 0.5f;
+    static float baseDelay = 0.1f;
     float activationTime = 0f;
     bool following = false;
     Trail trail;
