@@ -22,6 +22,7 @@ public class Bunny : MonoBehaviour {
     private int jumpTriggers = 0;
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.TryGetComponent<BunnyCounter>(out BunnyCounter bunnyCounter)) {
+            Debug.Log("bunny: collect");
             bunnyCounter.BunniesCollected();
             activationTime = Time.time;
             trail = bunnyCounter.GetComponent<Trail>();
