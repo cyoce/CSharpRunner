@@ -48,7 +48,7 @@ public class TilemapController : MonoBehaviour {
             terrainMap.SetTile(rightBound, groundBlock);
             nextBlock?.Invoke();
             int roll = rand.Next(100);
-            if(false && roll <= 15) {
+            if(roll <= 15) {
                 obstacleMap.SetTile(rightBound + new Vector3Int(0, 1, 0), obstacle);
             } else if(rightBound.x % 20 == 0) {
                 SpawnBunny();
