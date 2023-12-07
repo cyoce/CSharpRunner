@@ -17,7 +17,9 @@ public class BunnyCounter : MonoBehaviour
     public void BunniesCollected()
     {
         numberOfBunnies++;
+        Debug.Log("bunnycounter: collect");
         OnBunniesCollected.Invoke(this);
+
     }
 
     private void FixedUpdate() {

@@ -563,6 +563,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3262786839535842937, guid: 5bdcc9cb197b0d54bab33b060b7c0546, type: 3}
   m_PrefabInstance: {fileID: 4176349528730055206}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &785761738 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3359529175735977115, guid: 00688660211d3354f9bba1f38a06919f, type: 3}
+  m_PrefabInstance: {fileID: 2101328800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c075cfdcaa214299a4999849308badb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1948292030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -971,14 +982,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1882677248584074032, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: m_Time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5500401816323022609, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: jumpMarker
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 567031910516676033, guid: 7c338825543d9ef458074209cedc4750, type: 3}
+      objectReference: {fileID: 785761738}
     - target: {fileID: 6047139342874345626, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: m_RootOrder
       value: 2
