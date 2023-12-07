@@ -51,6 +51,7 @@ public class PlayerControl : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
         if(isDead) return;
         rendy.color = IsGrounded() ? orange : Color.white;
         float jumpAdder = body.velocity.y;
@@ -58,6 +59,7 @@ public class PlayerControl : MonoBehaviour {
         canJump = Input.GetKey(KeyCode.Space) && IsGrounded();
         if(canJump && !couldJump) {
             jumpAdder = jumpVel;
+            GetComponent<Trail>().AddPoint();
         }
 
         body.velocity = new Vector2(speed, jumpAdder);
@@ -69,7 +71,7 @@ public class PlayerControl : MonoBehaviour {
         ContactPoint2D contact = collision.GetContact(0);
         Vector2 point = contact.normal;
         Debug.DrawLine(contact.point, contact.point + 5 * contact.normal);
-        if(Mathf.Abs(point.x) > Mathf.Abs(point.y)) {
+        if(Mathf.Abs(point.x) > Mathf.Abs(point.y) && collision.gameObject.layer == 3) {
             Die();
         }
     }
