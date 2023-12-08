@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour {
 
     public LayerMask terrainLayer;
     public float speed;
+    public GameObject jumpMarker;
 
     Rigidbody2D body;
     SpriteRenderer rendy;
@@ -21,7 +22,7 @@ public class PlayerControl : MonoBehaviour {
     public float jumpHeight;
     public float airTime;
 
-    private float jumpVel;
+    public float _jumpVel;
     private float gravScale;
     void CalcGrav() {
         // 2T = AirTime
@@ -34,8 +35,8 @@ public class PlayerControl : MonoBehaviour {
         // jumpVel * T = 2*JumpHeight
         // jumpVel = 2*JumpHeight / T = 4*JumpHeight / AirTime
 
-        jumpVel = 4 * jumpHeight / airTime;
-        gravScale = jumpVel / (airTime / 2);
+        _jumpVel = 4 * jumpHeight / airTime;
+        gravScale = _jumpVel / (airTime / 2);
         body.gravityScale = gravScale / 9.81f;
 
     }
@@ -58,8 +59,10 @@ public class PlayerControl : MonoBehaviour {
         couldJump = canJump;
         canJump = Input.GetKey(KeyCode.Space) && IsGrounded();
         if(canJump && !couldJump) {
-            jumpAdder = jumpVel;
-            GetComponent<Trail>().AddPoint();
+            jumpAdder = _jumpVel;
+            //GetComponent<Trail>().AddPoint();
+            GameObject marker = Instantiate(jumpMarker);
+            marker.transform.position = transform.position;
         }
 
         body.velocity = new Vector2(speed, jumpAdder);
@@ -67,7 +70,6 @@ public class PlayerControl : MonoBehaviour {
 
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("bounce");
         ContactPoint2D contact = collision.GetContact(0);
         Vector2 point = contact.normal;
         Debug.DrawLine(contact.point, contact.point + 5 * contact.normal);
