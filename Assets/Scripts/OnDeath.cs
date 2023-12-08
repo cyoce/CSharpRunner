@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class OnDeath : MonoBehaviour
 {
-    public int afterDeath;
+    public string afterDeath;
 
     public void Dies()
     {
