@@ -36,7 +36,7 @@ RectTransform:
   - {fileID: 2419479246519247883}
   - {fileID: 51102851620638717}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bunnies: 0'
+  m_text: 'Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7a06d49c3ec2348538de1dd64422f187, type: 2}
   m_sharedMaterial: {fileID: -2925165793218153177, guid: 7a06d49c3ec2348538de1dd64422f187, type: 2}
