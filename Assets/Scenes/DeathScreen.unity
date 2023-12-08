@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce283e65300c48d3b8af74116552a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuReturn: 0
+  menuReturn: MainMenu
   ReturnButton: {fileID: 292873880}
 --- !u!114 &292873883
 MonoBehaviour:
