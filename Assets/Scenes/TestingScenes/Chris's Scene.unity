@@ -1578,6 +1578,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1215934561}
@@ -1585,6 +1589,18 @@ PrefabInstance:
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1240077945}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateBunnieText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BunnieUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6047139342874345626, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: m_RootOrder
       value: 6
