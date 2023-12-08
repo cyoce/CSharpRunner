@@ -994,10 +994,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 785761738}
@@ -1005,26 +1001,6 @@ PrefabInstance:
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1261583494}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OnScoreIncrease
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ScoreManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421803124268732819, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5500401816323022609, guid: c6b627c7826484849aa63d6574690502, type: 3}
-      propertyPath: airTime
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6047139342874345626, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: m_RootOrder
       value: 2
