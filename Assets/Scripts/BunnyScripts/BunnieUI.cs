@@ -16,6 +16,6 @@ public class BunnieUI : MonoBehaviour
     
     public void UpdateBunnieText(BunnyCounter bunnyCounter)
     {
-        bunnieText.text = bunnyCounter.numberOfBunnies.ToString();
+        bunnieText.text = "Bunnies: " + bunnyCounter.numberOfBunnies.ToString();
     }
 }
