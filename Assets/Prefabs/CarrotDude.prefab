@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 101237668585766570}
   - component: {fileID: 5421803124268732819}
   - component: {fileID: 7221753249623413110}
+  - component: {fileID: 3802172014787605654}
   m_Layer: 0
   m_Name: CarrotDude
   m_TagString: Player
@@ -183,7 +184,7 @@ MonoBehaviour:
   speed: 8
   jumpMarker: {fileID: 567031910516676033, guid: 7c338825543d9ef458074209cedc4750, type: 3}
   jumpHeight: 3
-  airTime: 0.7
+  airTime: 0.5
   _jumpVel: 0
 --- !u!114 &101237668585766570
 MonoBehaviour:
@@ -224,6 +225,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
+        m_MethodName: OnScoreIncrease
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   trail: {fileID: 0}
 --- !u!114 &7221753249623413110
 MonoBehaviour:
@@ -237,3 +250,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f6ab16c7b53ac45aa4eeb742fed343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3802172014787605654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8183359828263025311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f1b710d171c433eaf1087e44730aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  afterDeath: MainGame
