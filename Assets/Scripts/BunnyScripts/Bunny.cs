@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Animations;
 
 
 public class Bunny : MonoBehaviour {
@@ -15,6 +16,7 @@ public class Bunny : MonoBehaviour {
     Trail trail;
     PlayerControl player;
     Rigidbody2D rb;
+    Animator anim;
     public float accel;
 
     private float coeff;
@@ -42,6 +44,8 @@ public class Bunny : MonoBehaviour {
         if(collision.tag == "Player") {
             List<Collider2D> colliders = new();
             rb.GetAttachedColliders(colliders);
+            //anim.GetComponent<Animator>().SetTrigger("BunnyFollowing");
+            anim.SetTrigger("BunnyFollowing");
             foreach(var item in colliders) {
                 if(item.enabled == false) {
                     item.enabled = true;
@@ -101,5 +105,7 @@ public class Bunny : MonoBehaviour {
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
+
 }

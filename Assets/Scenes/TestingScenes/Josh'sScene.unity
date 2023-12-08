@@ -1470,7 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f1b710d171c433eaf1087e44730aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  afterDeath: 0
+  afterDeath: 
 --- !u!1 &1692932496
 GameObject:
   m_ObjectHideFlags: 0

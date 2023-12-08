@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ReturnToMenu : MonoBehaviour
 {
-    public int menuReturn;
+    public string menuReturn;
     public GameObject ReturnButton;
 
     public void ReturnMenuButton()
