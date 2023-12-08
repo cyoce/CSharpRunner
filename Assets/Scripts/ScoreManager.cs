@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
         Debug.Log("score increase: " + score);
         score += 100;
         PlayerPrefs.SetInt("HighScore", score);
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highScore = PlayerPrefs.GetInt("HighScore");
         highScore += distanceManager.distanceRan;
 
         CheckHighScore();
