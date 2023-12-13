@@ -73,7 +73,7 @@ public class PlayerControl : MonoBehaviour {
         ContactPoint2D contact = collision.GetContact(0);
         Vector2 point = contact.normal;
         Debug.DrawLine(contact.point, contact.point + 5 * contact.normal);
-        if(false && Mathf.Abs(point.x) > Mathf.Abs(point.y) && collision.gameObject.layer == 3) {
+        if(Mathf.Abs(point.x) > Mathf.Abs(point.y) && collision.gameObject.layer == 3) {
             Die();
         }
     }
