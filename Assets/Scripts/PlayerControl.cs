@@ -70,12 +70,18 @@ public class PlayerControl : MonoBehaviour {
 
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        ContactPoint2D contact = collision.GetContact(0);
-        Vector2 point = contact.normal;
-        Debug.DrawLine(contact.point, contact.point + 5 * contact.normal);
-        if(Mathf.Abs(point.x) > Mathf.Abs(point.y) && collision.gameObject.layer == 3) {
+        Debug.Log(collision.otherCollider);
+        if(collision.gameObject.layer == 3 && !collision.otherCollider.TryGetComponent<BoxCollider2D>(out _)) {
             Die();
         }
+        /*
+        ContactPoint2D contact = collision.GetContact(1);
+        Vector2 point = contact.normal;
+        Debug.DrawLine(contact.point, contact.point + 5 * contact.normal);
+        */
+        /*if(Mathf.Abs(point.x) > Mathf.Abs(point.y) && collision.gameObject.layer == 3) {
+            Die();
+        }*/
     }
 
     // https://kylewbanks.com/blog/unity-2d-checking-if-a-character-or-object-is-on-the-ground-using-raycasts
