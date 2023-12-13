@@ -1005,6 +1005,10 @@ PrefabInstance:
       propertyPath: OnBunniesCollected.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 979332289}
+    - target: {fileID: 5907061276111669755, guid: c6b627c7826484849aa63d6574690502, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 50a3b4a945703ca449c3b6f115c6f25a, type: 2}
     - target: {fileID: 6047139342874345626, guid: c6b627c7826484849aa63d6574690502, type: 3}
       propertyPath: m_RootOrder
       value: 2
