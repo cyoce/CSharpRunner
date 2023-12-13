@@ -44,7 +44,6 @@ public class Bunny : MonoBehaviour {
         if(collision.tag == "Player") {
             List<Collider2D> colliders = new();
             rb.GetAttachedColliders(colliders);
-            //anim.GetComponent<Animator>().SetTrigger("BunnyFollowing");
             anim.SetTrigger("BunnyFollowing");
             foreach(var item in colliders) {
                 if(item.enabled == false) {
