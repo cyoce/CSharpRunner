@@ -23,7 +23,8 @@ public class ScoreManager : MonoBehaviour
 
     public void PrintScore()
     {
-        scoreText.text = "Score: " + score.ToString();
+        if(scoreText != null)
+            scoreText.text = "Score: " + score.ToString();
     }
 
     void Start()
