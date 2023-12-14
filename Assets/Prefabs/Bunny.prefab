@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accel: 10
+  bunnySound: {fileID: 8300000, guid: ace25dfbbea094f7e81c6112d04381d9, type: 3}
 --- !u!50 &-1737593676224547866
 Rigidbody2D:
   serializedVersion: 4

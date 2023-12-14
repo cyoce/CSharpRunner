@@ -18,6 +18,8 @@ public class Bunny : MonoBehaviour {
     Rigidbody2D rb;
     Animator anim;
     public float accel;
+    public AudioClip bunnySound;
+
 
     private float coeff;
 
@@ -26,6 +28,7 @@ public class Bunny : MonoBehaviour {
         if(other.TryGetComponent<BunnyCounter>(out BunnyCounter bunnyCounter)) {
             Debug.Log("bunny: collect");
             bunnyCounter.BunniesCollected();
+            AudioSource.PlayClipAtPoint(bunnySound, transform.position);
             activationTime = Time.time;
             trail = bunnyCounter.GetComponent<Trail>();
             player = bunnyCounter.GetComponent<PlayerControl>();
@@ -64,6 +67,7 @@ public class Bunny : MonoBehaviour {
         if(following && Time.time - activationTime >= delay) {
 
             float dist = transform.position.x - player.transform.position.x;
+            AudioSource.PlayClipAtPoint(bunnySound, transform.position);
             //coeff = 1 + Mathf.Pow(dist - 1, -1);
             coeff = Mathf.Max(2 / (Mathf.Pow(1.5f, (dist+1)/2) + 1) - 1, 0);
             Vector3 offset = transform.position + Vector3.up * 0.5f;

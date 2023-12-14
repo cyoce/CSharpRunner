@@ -9,6 +9,7 @@ public class BunnyCounter : MonoBehaviour
     public int numberOfBunnies { get; private set; }
     public UnityEvent<BunnyCounter> OnBunniesCollected;
     public TrailRenderer trail;
+    public AudioClip bunnySound;
 
     private void Start() {
         trail = GetComponent<TrailRenderer>();
@@ -16,6 +17,7 @@ public class BunnyCounter : MonoBehaviour
     }
     public void BunniesCollected()
     {
+        AudioSource.PlayClipAtPoint(bunnySound, transform.position);
         numberOfBunnies++;
         Debug.Log("bunnycounter: collect");
         OnBunniesCollected.Invoke(this);
