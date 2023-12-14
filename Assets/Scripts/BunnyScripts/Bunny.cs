@@ -18,6 +18,7 @@ public class Bunny : MonoBehaviour {
     Rigidbody2D rb;
     Animator anim;
     public float accel;
+    public AudioClip bunnySound;
 
     private float coeff;
 
@@ -26,6 +27,7 @@ public class Bunny : MonoBehaviour {
         if(other.TryGetComponent<BunnyCounter>(out BunnyCounter bunnyCounter)) {
             Debug.Log("bunny: collect");
             bunnyCounter.BunniesCollected();
+            AudioSource.PlayClipAtPoint(bunnySound, transform.position);
             activationTime = Time.time;
             trail = bunnyCounter.GetComponent<Trail>();
             player = bunnyCounter.GetComponent<PlayerControl>();
