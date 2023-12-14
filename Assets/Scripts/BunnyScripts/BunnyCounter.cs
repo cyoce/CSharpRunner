@@ -17,7 +17,7 @@ public class BunnyCounter : MonoBehaviour
     }
     public void BunniesCollected()
     {
-        AudioSource.PlayClipAtPoint(bunnySound, transform.position);
+//        AudioSource.PlayClipAtPoint(bunnySound, transform.position);
         numberOfBunnies++;
         Debug.Log("bunnycounter: collect");
         OnBunniesCollected.Invoke(this);
